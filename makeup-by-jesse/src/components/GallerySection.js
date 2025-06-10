@@ -22,41 +22,35 @@ export default function GallerySection() {
   return (
     <section
       id="gallery"
-      className="bg-white py-20"
+      className="scroll-mt-14 bg-white py-20"
       style={{ paddingTop: '100px', paddingBottom: '150px' }}
     >
-      <div
-        className="mx-auto px-6 text-left"
-        style={{ maxWidth: '1070px' }}
-      >
+      <div className="mx-auto px-6 text-left" style={{ maxWidth: '1070px' }}>
         <p className="text-[#6DC0C8] uppercase tracking-widest text-sm mb-1">Gallery</p>
         <h2 className={`text-5xl font-medium text-gray-900 mb-10 ${oswald.className}`}>PORTFOLIO</h2>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7">
           {images.map((img, i) => (
-            <div
-              key={i}
-              className="relative group cursor-pointer overflow-hidden"
-              onClick={() => setSelectedImage(img.src)}
-            >
-              <Image
-                src={img.src}
-                alt={img.label}
-                width={500}
-                height={240}
-                className="w-full h-[240px] object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-45 transition duration-300 flex items-center justify-center">
-                <div className="text-white text-center">
-                  <div className="text-3xl font-thin mb-2">+</div>
-                  <span className="text-sm bg-black bg-opacity-50 px-3 py-1 rounded">
-                    {img.label}
-                  </span>
-                </div>
+          <div
+            key={i}
+            className="relative group cursor-pointer overflow-hidden aspect-[4/3]"
+            onClick={() => setSelectedImage(img.src)}
+          >
+            <Image
+              src={img.src}
+              alt={img.label}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              className="object-cover transition-transform duration-300 group-hover:scale-105"
+            />
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-35 transition duration-300 flex items-center justify-center">
+              <div className="text-white text-center">
+                <div className="text-3xl font-thin mb-2">+</div>
               </div>
             </div>
+          </div>
           ))}
         </div>
 
@@ -71,7 +65,7 @@ export default function GallerySection() {
             <button
               className="absolute top-6 right-6 text-white text-3xl hover:scale-110 z-50 cursor-pointer"
               onClick={(e) => {
-                e.stopPropagation(); // Prevent closing when clicking the button
+                e.stopPropagation();
                 setSelectedImage(null);
               }}
             >
@@ -84,6 +78,7 @@ export default function GallerySection() {
               alt="Selected"
               width={900}
               height={600}
+              sizes="(max-width: 900px) 90vw, 900px"
               className="max-w-full max-h-[90vh] object-contain rounded shadow-lg"
             />
           </div>

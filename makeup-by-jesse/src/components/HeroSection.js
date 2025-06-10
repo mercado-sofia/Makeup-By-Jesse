@@ -9,7 +9,7 @@ export default function HeroSection() {
 
   return (
     <section
-      id="hero"
+      id="home"
       className="relative h-screen w-full bg-black text-white flex flex-col justify-center items-center"
       style={{
         backgroundImage: 'url("/makeup-by-jesse.jpg")',
@@ -20,19 +20,30 @@ export default function HeroSection() {
     >
       <div className="absolute inset-0 bg-black opacity-85 z-0"></div>
 
-      {/* Heading */}
+      {/* Heading & Button */}
       <div className="text-center z-10">
         <p className="text-[#6DC0C8] uppercase tracking-widest text-sm cursor-default">
-            HAIR & MAKEUP ARTIST
+          HAIR & MAKEUP ARTIST
         </p>
         <div className="max-w-2xl mx-auto">
-            <h1 className="font-bold mt-4 text-center cursor-default"
-            style={{ lineHeight: '74px', fontSize: '68px'}}
-            >
-                WELCOME TO MAKEUP BY JESSE
-            </h1>
+          <h1
+            className="font-bold mt-4 text-center cursor-default"
+            style={{ lineHeight: '74px', fontSize: '68px' }}
+          >
+            WELCOME TO MAKEUP BY JESSE
+          </h1>
         </div>
         <div className="w-10 border-b border-gray-300 mx-auto mt-2"></div>
+
+        {/* Let's Talk Button */}
+        <a
+          href="https://www.facebook.com/jessecamillemua"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block mt-8 px-8 py-3 rounded-full text-sm font-medium bg-[#6DC0C8] text-black hover:bg-white hover:text-black transition-all duration-300"
+        >
+          Let&apos;s Talk
+        </a>
       </div>
 
       {/* Scroll-down icon & line */}
