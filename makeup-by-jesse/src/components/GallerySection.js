@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import { oswald } from '../fonts';
+import { TfiArrowRight } from "react-icons/tfi";
 
 const images = [
   { src: '/gallery/1.jpg', label: 'Fashion Makeup' },
@@ -32,26 +33,38 @@ export default function GallerySection() {
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7">
           {images.map((img, i) => (
-          <div
-            key={i}
-            className="relative group cursor-pointer overflow-hidden aspect-[4/3]"
-            onClick={() => setSelectedImage(img.src)}
-          >
-            <Image
-              src={img.src}
-              alt={img.label}
-              fill
-              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              className="object-cover transition-transform duration-300 group-hover:scale-105"
-            />
-            {/* Overlay */}
-            <div className="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-35 transition duration-300 flex items-center justify-center">
-              <div className="text-white text-center">
-                <div className="text-3xl font-thin mb-2">+</div>
+            <div
+              key={i}
+              className="relative group cursor-pointer overflow-hidden aspect-[4/3]"
+              onClick={() => setSelectedImage(img.src)}
+            >
+              <Image
+                src={img.src}
+                alt={img.label}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-35 transition duration-300 flex items-center justify-center">
+                <div className="text-white text-center">
+                  <div className="text-3xl font-thin mb-2">+</div>
+                </div>
               </div>
             </div>
-          </div>
           ))}
+        </div>
+
+        {/* SEE MORE Link */}
+        <div className="flex justify-end mt-10">
+          <a
+            href="https://www.instagram.com/jessecamille.mua?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`flex items-center gap-2 text-[#6DC0C8] text-[15px] font-medium tracking-[4px] hover:text-[#79D3DB] transition duration-100 ${oswald.className}`}
+          >
+            SEE MORE <TfiArrowRight className="text-[16px]" />
+          </a>
         </div>
 
         {/* Fullscreen popup */}

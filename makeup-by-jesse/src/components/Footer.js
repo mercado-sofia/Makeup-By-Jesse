@@ -36,7 +36,7 @@ export default function Footer() {
           href="https://www.facebook.com/jessecamillemua"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-[#6DC0C8] text-white px-8 py-3 text-sm font-medium hover:bg-[#56aab2] hover:scale-104 transition whitespace-nowrap border-3 border-black"
+          className="bg-[#6DC0C8] text-white px-8 py-3 text-sm font-medium hover:bg-[#56aab2] hover:scale-104 transition whitespace-nowrap border-2 border-black"
         >
           Let&apos;s Talk
         </a>
