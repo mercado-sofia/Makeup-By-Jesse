@@ -3,7 +3,7 @@
 import { BiSolidQuoteAltLeft } from 'react-icons/bi';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
-import { oswald } from '../fonts';
+import { oswald, arapey } from '../fonts';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
@@ -47,8 +47,8 @@ export default function TestimonialsSection() {
 
       {/* Swiper content */}
       <div className="relative z-20 max-w-3xl px-6">
-        <p className="text-[#6DC0C8] uppercase tracking-widest text-sm mb-2">Testimonials</p>
-        <h2 className={`text-4xl font-medium mb-10 ${oswald.className}`}>SOME CLIENTS FEEDBACK</h2>
+        <p className={`text-[#6DC0C8] uppercase tracking-widest text-[15px] mb-1 ${oswald.className}`}>Testimonials</p>
+        <h2 className={`text-[42px] font-medium mb-10 ${arapey.className}`}>Some Clients Feedback</h2>
 
         <Swiper
           modules={[Pagination]}
@@ -92,7 +92,7 @@ export default function TestimonialsSection() {
       {/* Swiper bullet styles */}
       <style jsx global>{`
         .swiper-pagination-bullets {
-          margin-top: 24px;
+          margin-top: 26px;
           text-align: center;
         }
         .swiper-pagination-bullet {

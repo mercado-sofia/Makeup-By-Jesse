@@ -29,10 +29,16 @@ html {
 }
 
 .swiper-pagination-bullet {
-  background-color: #FFF !important;
+  width: 10px !important;
+  height: 10px !important;
+  background-color: #a3b2b4 !important;
+  border-radius: 9999px !important;
   opacity: 1;
+  transition: all 0.3s ease-in-out;
 }
 
 .swiper-pagination-bullet-active {
   background-color: #6DC0C8 !important;
+  transform: scale(1.2);
 }
+

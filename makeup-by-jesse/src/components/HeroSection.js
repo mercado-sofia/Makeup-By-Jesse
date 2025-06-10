@@ -1,6 +1,8 @@
 'use client';
 
+import Image from 'next/image';
 import { HiChevronDoubleDown } from 'react-icons/hi2';
+import { oswald, arapey } from '../fonts';
 
 export default function HeroSection() {
   const scrollToAbout = () => {
@@ -10,7 +12,7 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative h-screen w-full bg-black text-white flex flex-col justify-center items-center"
+      className="relative h-screen w-full bg-black text-white flex flex-col justify-start items-center pt-34"
       style={{
         backgroundImage: 'url("/makeup-by-jesse.jpg")',
         backgroundSize: 'cover',
@@ -22,18 +24,33 @@ export default function HeroSection() {
 
       {/* Heading & Button */}
       <div className="text-center z-10">
+        {/* Logo */}
+        <div className="flex justify-center mb-8">
+          <Image
+            src="/mbj_logo.png"
+            alt="MBJ Logo"
+            width={150}
+            height={150}
+            className="object-contain"
+          />
+        </div>
+
+        {/* Tagline */}
         <p className="text-[#6DC0C8] uppercase tracking-widest text-sm cursor-default">
           HAIR & MAKEUP ARTIST
         </p>
+
+        {/* Heading */}
         <div className="max-w-2xl mx-auto">
           <h1
-            className="font-bold mt-4 text-center cursor-default"
-            style={{ lineHeight: '74px', fontSize: '68px' }}
+            className={`font-bold mt-4 italic text-center cursor-default ${arapey.className}`}
+            style={{ lineHeight: '74px', fontSize: '72px' }}
           >
-            WELCOME TO MAKEUP BY JESSE
+            Welcome To Makeup<br />by Jesse
           </h1>
         </div>
-        <div className="w-10 border-b border-gray-300 mx-auto mt-2"></div>
+
+        <div className="w-12 border-b border-gray-300 mx-auto mt-4"></div>
 
         {/* Let's Talk Button */}
         <a
