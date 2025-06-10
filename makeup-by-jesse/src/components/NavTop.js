@@ -59,7 +59,7 @@ export default function NavTop() {
 
         {/* Nav Links */}
         <ul
-          className={`flex space-x-6 uppercase text-[15px] tracking-[1px] font-light ${oswald.className}`}
+          className={`flex space-x-6 uppercase text-[15px] tracking-[1px] font-medium ${oswald.className}`}
         >
           {sectionIds.map((id) => (
             <li key={id}>

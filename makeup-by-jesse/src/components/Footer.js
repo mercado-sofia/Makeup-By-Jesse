@@ -5,6 +5,7 @@ import { SiTiktok } from 'react-icons/si';
 import { FiPhone, FiMail, FiMapPin } from 'react-icons/fi';
 import { motion, useInView } from 'framer-motion';
 import { useEffect, useState, useRef } from 'react';
+import { arapey } from '../fonts';
 
 export default function Footer() {
   const lineRef = useRef(null);
@@ -26,7 +27,7 @@ export default function Footer() {
     >
       <div className="max-w-[1240px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         {/* Message Text */}
-        <h2 className="text-xl text-[#6CA8AE] opacity-60 md:text-[24px] font-semibold text-center md:text-left">
+        <h2 className={`text-xl text-[#65B1B9] md:text-[26px] font-semibold text-center md:text-left ${arapey.className}`}>
           Ready to book your appointment? <br className="hidden md:block" />
           Send me a message on Facebook, and let&apos;s create the perfect look for you!
         </h2>

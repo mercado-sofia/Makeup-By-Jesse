@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { useState } from 'react';
-import { oswald } from '../fonts';
+import { oswald, arapey } from '../fonts';
 import { TfiArrowRight } from "react-icons/tfi";
 
 const images = [
@@ -27,8 +27,8 @@ export default function GallerySection() {
       style={{ paddingTop: '100px', paddingBottom: '150px' }}
     >
       <div className="mx-auto px-6 text-left" style={{ maxWidth: '1070px' }}>
-        <p className="text-[#6DC0C8] uppercase tracking-widest text-sm mb-1">Gallery</p>
-        <h2 className={`text-5xl font-medium text-gray-900 mb-10 ${oswald.className}`}>PORTFOLIO</h2>
+        <p className={`text-[#6DC0C8] uppercase tracking-widest text-[15px] mb-1 ${oswald.className}`}>Gallery</p>
+        <h2 className={`text-5xl font-medium italic text-gray-900 mb-10 ${arapey.className}`}>Portfolio</h2>
 
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7">

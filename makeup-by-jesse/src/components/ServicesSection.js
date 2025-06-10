@@ -6,7 +6,7 @@ import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import '../app/globals.css';
-import { oswald } from '../fonts';
+import { oswald, arapey } from '../fonts';
 
 const services = [
   {
@@ -51,12 +51,12 @@ export default function ServicesSection() {
   return (
     <section
     id="services"
-    className="scroll-mt-22 relative bg-[#0E0E0E]"
-    style={{ paddingTop: '120px', paddingBottom: '100px' }}
+    className="scroll-mt-18 bg-[#FFF]"
+    style={{ paddingTop: '80px', paddingBottom: '100px' }}
     >
-      <div className="max-w-[1280px] mx-auto px-4 text-center">
-        <p className="text-[#6DC0C8] uppercase tracking-widest text-sm mb-1">What We Do</p>
-        <h2 className={`text-[42px] font-light text-white mb-10 ${oswald.className}`}>MAKEUP SERVICES</h2>
+      <div className="max-w-[1280px] mx-auto px-30 text-left">
+        <p className={`text-[#6DC0C8] uppercase tracking-widest text-[15px] mb-1 ${oswald.className}`}>What We Do</p>
+        <h2 className={`text-[42px] font-light italic text-black mb-10 ${arapey.className}`}>Makeup Services</h2>
 
       <Swiper
       modules={[Pagination]}
@@ -73,7 +73,7 @@ export default function ServicesSection() {
       >
       {services.map((service, index) => (
           <SwiperSlide key={index}>
-          <div className="w-full h-[340px] bg-[#1B1D1D] overflow-hidden shadow-md flex flex-col transition-all duration-300 transform hover:-translate-y-2 hover:bg-white group">
+          <div className="w-full h-[340px] bg-[#FFF] overflow-hidden shadow-xl flex flex-col transition-all duration-300 transform hover:-translate-y-2 hover:bg-[#E0F4F6] group mb-8">
               {/* Image - 50% */}
               <div className="relative w-full h-1/2">
               <Image
@@ -88,10 +88,10 @@ export default function ServicesSection() {
 
               {/* Text - 50% */}
               <div className="h-1/2 p-4 text-center flex flex-col justify-center transition-colors duration-300">
-              <h3 className={`text-lg font-normal tracking-[.5px] mb-3 group-hover:text-black transition-colors duration-300 ${oswald.className}`}>
+              <h3 className={`text-lg text-black font-normal tracking-[.5px] mb-3 group-hover:text-black transition-colors duration-300 ${oswald.className}`}>
                 {service.title.toUpperCase()}
               </h3>
-              <p className="text-[#B8BEBF] text-[13px] font-normal leading-normal group-hover:text-[#504F54] transition-colors duration-300">
+              <p className="text-[#5D6473] text-[13px] font-normal leading-normal group-hover:text-[#504F54] transition-colors duration-300">
                 {service.description}
               </p>
               </div>
@@ -99,9 +99,6 @@ export default function ServicesSection() {
           </SwiperSlide>
       ))}
       </Swiper>
-      </div>
-      <div className="absolute left-1/2 bottom-[-35px] transform -translate-x-1/2 z-10">
-        <div className="w-px h-18 bg-[#6DC0C8]"></div>
       </div>
     </section>
   );

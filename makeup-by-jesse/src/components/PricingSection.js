@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
-import { oswald } from '../fonts';
+import { oswald, arapey } from '../fonts';
 
 export default function PricingSection() {
   const slides = [
@@ -40,12 +40,12 @@ export default function PricingSection() {
 
   return (
     <section id="pricing"
-    className="scroll-mt-8 relative bg-gray-50 py-20"
-    style={{ paddingTop: '100px', paddingBottom: '150px' }}
+    className="scroll-mt-20 relative bg-gray-50 py-20"
+    style={{ paddingTop: '40px', paddingBottom: '150px' }}
     >
       <div className="max-w-7xl mx-auto px-6 text-center">
-        <p className="text-[#6DC0C8] uppercase tracking-widest text-sm mb-1">Prices</p>
-        <h2 className={`text-5xl font-medium text-gray-900 mb-10 ${oswald.className}`}>PRICING PLAN</h2>
+        <p className={`text-[#6DC0C8] uppercase tracking-widest text-[15px] mb-1 ${oswald.className}`}>Prices</p>
+        <h2 className={`text-5xl font-medium italic text-gray-900 mb-10 ${arapey.className}`}>Pricing Plan</h2>
 
         <div className="relative">
           {/* Arrows */}
