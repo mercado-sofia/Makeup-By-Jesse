@@ -3,11 +3,11 @@
 import { useEffect, useState } from 'react';
 import { oswald } from '../fonts';
 
-const sectionIds = ['hero', 'about', 'services', 'pricing', 'gallery', 'testimonials'];
+const sectionIds = ['home', 'about', 'services', 'pricing', 'gallery', 'testimonials'];
 
 export default function NavTop() {
   const [scrolled, setScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState('hero');
+  const [activeSection, setActiveSection] = useState('home');
 
   // Handle navbar background change
   useEffect(() => {
@@ -32,7 +32,7 @@ export default function NavTop() {
       },
       {
         root: null,
-        threshold: 0.5, // 50% visibility triggers the change
+        threshold: 0.5,
       }
     );
 
@@ -69,7 +69,7 @@ export default function NavTop() {
                   activeSection === id ? 'text-[#6DC0C8]' : 'text-white'
                 } hover:text-[#6DC0C8]`}
               >
-                {id === 'hero' ? 'Home' : id.charAt(0).toUpperCase() + id.slice(1)}
+                {id === 'home' ? 'Home' : id.charAt(0).toUpperCase() + id.slice(1)}
               </a>
             </li>
           ))}

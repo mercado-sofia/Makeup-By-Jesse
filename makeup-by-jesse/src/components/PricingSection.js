@@ -40,7 +40,7 @@ export default function PricingSection() {
 
   return (
     <section id="pricing"
-    className="relative bg-gray-50 py-20"
+    className="scroll-mt-8 relative bg-gray-50 py-20"
     style={{ paddingTop: '100px', paddingBottom: '150px' }}
     >
       <div className="max-w-7xl mx-auto px-6 text-center">
@@ -66,13 +66,15 @@ export default function PricingSection() {
                 <div key={groupIndex} className="flex justify-center gap-6 flex-shrink-0 w-full">
                   {group.map((image, imageIndex) => (
                     <div key={imageIndex} className="rounded-md overflow-hidden shadow-lg cursor-pointer">
+                    <div className="relative w-[500px] h-[480px] rounded-md overflow-hidden shadow-lg cursor-pointer">
                       <Image
                         src={image.src}
                         alt={image.alt}
-                        width={500}
-                        height={480}
-                        className="w-[500px] h-[480px] object-cover"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 500px"
+                        className="object-cover"
                       />
+                    </div>
                     </div>
                   ))}
                 </div>
