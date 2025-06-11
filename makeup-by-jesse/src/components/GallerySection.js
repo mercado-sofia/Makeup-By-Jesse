@@ -6,15 +6,15 @@ import { oswald, arapey } from '../fonts';
 import { TfiArrowRight } from "react-icons/tfi";
 
 const images = [
-  { src: '/gallery/1.jpg', label: 'Fashion Makeup' },
-  { src: '/gallery/2.jpg', label: 'Hair Styling' },
-  { src: '/gallery/3.jpg', label: 'Editorial Look' },
-  { src: '/gallery/4.jpg', label: 'Bridal Glam' },
-  { src: '/gallery/5.jpg', label: 'Creative Art' },
-  { src: '/gallery/6.jpg', label: 'Natural Beauty' },
-  { src: '/gallery/7.jpg', label: 'Bridal Glam' },
-  { src: '/gallery/8.jpg', label: 'Creative Art' },
-  { src: '/gallery/9.jpeg', label: 'Natural Beauty' },
+  { src: '/gallery/g1.jpg', label: 'Fashion Makeup' },
+  { src: '/gallery/g2.jpg', label: 'Hair Styling' },
+  { src: '/gallery/g3.jpg', label: 'Editorial Look' },
+  { src: '/gallery/g4.jpg', label: 'Bridal Glam' },
+  { src: '/gallery/g5.jpg', label: 'Creative Art' },
+  { src: '/gallery/g6.jpg', label: 'Natural Beauty' },
+  { src: '/gallery/g7.jpg', label: 'Bridal Glam' },
+  { src: '/gallery/g8.jpg', label: 'Creative Art' },
+  { src: '/gallery/g9.jpg', label: 'Natural Beauty' },
 ];
 
 export default function GallerySection() {
