@@ -1,9 +1,9 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { oswald } from '../fonts';
+import { oswald, arapey } from '../fonts';
 
-const sectionIds = ['home', 'about', 'services', 'pricing', 'gallery', 'testimonials'];
+const sectionIds = ['home', 'about', 'services', 'pricing', 'gallery', 'reviews'];
 
 export default function NavTop() {
   const [scrolled, setScrolled] = useState(false);
@@ -52,7 +52,7 @@ export default function NavTop() {
     >
       <div className="max-w-7xl mx-auto px-6 py-8 flex justify-between items-center">
         {/* Logo */}
-        <div className="text-xl italic font-bold tracking-[.5px]">
+        <div className={`text-xl italic font-bold tracking-[.5px]" ${arapey.className}`}>
           <span className="text-white">Makeup by </span>
           <span className="text-[#6DC0C8]">Jesse</span>
         </div>
