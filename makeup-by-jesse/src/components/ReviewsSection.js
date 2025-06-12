@@ -7,7 +7,7 @@ import { oswald, arapey } from '../fonts';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-const testimonials = [
+const reviews = [
   {
     name: 'Ninya',
     quote: 'Can\’t get over how good my makeup turned out, huge thanks to this talented MUA! She really did her magic on my face and made me feel so pretty. Plus, she took a photo of the final look, which I enjoyed because I get to upload my solo looks. If you’ve got an event or just want to feel glam, definitely book her for your next glow-up!',
@@ -35,10 +35,10 @@ const testimonials = [
   },
 ];
 
-export default function TestimonialsSection() {
+export default function ReviewsSection() {
   return (
     <section
-      id="testimonials"
+      id="reviews"
       className="scroll-mt-30 relative min-h-[80vh] flex items-center justify-center text-white text-center bg-fixed bg-start bg-cover"
       style={{ backgroundImage: "url('/b&w-bg.jpeg')" }}
     >
@@ -59,7 +59,7 @@ export default function TestimonialsSection() {
             },
           }}
         >
-          {testimonials.map((item, i) => (
+          {reviews.map((item, i) => (
           <SwiperSlide key={i}>
             <div className="flex justify-center mb-6">
               <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-black text-xl">
