@@ -48,7 +48,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
         {/* Logo + About */}
         <div>
-          <div className="text-2xl italic font-semibold tracking-[.5px] mb-3">
+          <div className={`text-2xl italic font-semibold tracking-[.5px] mb-3 ${arapey.className}`}>
             <span className="text-white">Makeup by </span>
             <span className="text-[#6DC0C8]">Jesse</span>
           </div>
