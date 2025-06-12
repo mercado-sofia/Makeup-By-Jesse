@@ -47,8 +47,8 @@ export default function TestimonialsSection() {
 
       {/* Swiper content */}
       <div className="relative z-20 max-w-3xl px-6">
-        <p className={`text-[#6DC0C8] uppercase tracking-widest text-[15px] mb-1 ${oswald.className}`}>Testimonials</p>
-        <h2 className={`text-[42px] font-medium mb-10 ${arapey.className}`}>Some Clients Feedback</h2>
+        <p className={`text-[#6DC0C8] uppercase tracking-widest text-[15px] mb-1 ${oswald.className}`}>Reviews</p>
+        <h2 className={`text-[42px] font-medium mb-10 ${arapey.className}`}>Client Reviews</h2>
 
         <Swiper
           modules={[Pagination]}
