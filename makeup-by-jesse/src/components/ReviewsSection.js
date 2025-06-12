@@ -20,7 +20,7 @@ const reviews = [
   },
   {
     name: 'Maria',
-    quote: 'It was 2019 when I first inquired to Makeup by Jesse pero hindi natuloy. And it\'s now 2024 at last nkpagpabook na din. Thank you for making me pretty, enhancing my beauty (charrrr) Makeup by Jesse. If you are looking for h&mua na sulit and hindi lugi ang bayad, visit, like and inquire on her page. A highly recommended h&mua. Sa uulitin 😊',
+    quote: 'It was 2019 when I first inquired to Makeup by Jesse pero hindi natuloy. And it\'s now 2024 at last nkpagpabook na din. Thank you for making me pretty, enhancing my beauty (charrr) Makeup by Jesse. If you are looking for h&mua na sulit and hindi lugi ang bayad, visit, like and inquire on her page. A highly recommended h&mua. Sa uulitin 😊',
     link: 'https://www.facebook.com/share/p/1Yo1QL2EYe/',
   },
   {
