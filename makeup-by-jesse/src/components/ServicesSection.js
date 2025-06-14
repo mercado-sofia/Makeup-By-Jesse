@@ -51,7 +51,7 @@ export default function ServicesSection() {
 	return (
 		<section
 			id="services"
-			className="scroll-mt-18 bg-[#FFF]"
+			className="scroll-mt-12 bg-[#FFF]"
 			style={{ paddingTop: '80px', paddingBottom: '100px' }}
 		>
 			<div className="max-w-[1280px] mx-auto px-30 text-left">
