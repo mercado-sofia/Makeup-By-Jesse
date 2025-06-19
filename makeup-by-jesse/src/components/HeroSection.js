@@ -12,7 +12,7 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative h-screen w-full bg-black text-white flex flex-col justify-start items-center pt-34"
+      className="relative h-screen w-full bg-black text-white flex flex-col justify-start items-center pt-50 sm:pt-20 pt-lowheight pt-highheight"
       style={{
         backgroundImage: 'url("/makeup-by-jesse.jpg")',
         backgroundSize: 'cover',
@@ -20,44 +20,44 @@ export default function HeroSection() {
         backgroundRepeat: 'no-repeat',
       }}
     >
+      {/* Overlay */}
       <div className="absolute inset-0 bg-black opacity-85 z-0"></div>
 
-      {/* Heading & Button */}
-      <div className="text-center z-10">
+      {/* Content */}
+      <div className="text-center z-10 flex flex-col items-center">
         {/* Logo */}
-        <div className="flex justify-center mb-8">
+        <div className="mb-6 sm:mb-8">
           <Image
             src="/mbj_logo.png"
             alt="MBJ Logo"
             width={150}
             height={150}
-            className="object-contain"
+            className="object-contain sm:w-[150px] sm:h-[150px] w-[100px] h-[100px]"
           />
         </div>
 
         {/* Tagline */}
-        <p className="text-[#6DC0C8] uppercase tracking-widest text-sm cursor-default">
-          HAIR & MAKEUP ARTIST
+        <p className="text-[#6DC0C8] uppercase tracking-widest text-sm sm:text-sm mb-2 cursor-default">
+          Hair & Makeup Artist
         </p>
 
         {/* Heading */}
-        <div className="max-w-2xl mx-auto">
-          <h1
-            className={`font-bold mt-4 italic text-center cursor-default ${arapey.className}`}
-            style={{ lineHeight: '74px', fontSize: '72px' }}
-          >
-            Welcome To Makeup<br />by Jesse
-          </h1>
-        </div>
+        <h1
+          className={`italic font-bold text-center cursor-default leading-tight mb-4 ${arapey.className} 
+            text-[30px] sm:text-[42px] md:text-[60px] lg:text-[72px]`}
+        >
+          Welcome To Makeup<br />by Jesse
+        </h1>
 
-        <div className="w-12 border-b border-gray-300 mx-auto mt-4"></div>
+        {/* Line */}
+        <div className="w-12 border-b border-gray-300 mx-auto mt-2 mb-6"></div>
 
         {/* Let's Talk Button */}
         <a
           href="https://www.facebook.com/jessecamillemua"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block mt-8 px-8 py-3 rounded-full text-sm font-medium bg-[#6DC0C8] text-black hover:bg-white hover:text-black transition-all duration-300"
+          className="inline-block px-6 py-3 rounded-full text-sm font-medium bg-[#6DC0C8] text-black hover:bg-white hover:text-black transition-all duration-300"
         >
           Let&apos;s Talk
         </a>

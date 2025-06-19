@@ -19,140 +19,130 @@ export default function Footer() {
 
   return (
     <>
-    <section
-      className="text-black py-20 px-6"
-      style={{
-        background: 'linear-gradient(90deg, #FFF 0%, #D6EDF0 100%)',
-      }}
-    >
-      <div className="max-w-[1240px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-        {/* Message Text */}
-        <h2 className={`text-xl text-[#65B1B9] md:text-[26px] font-semibold text-center md:text-left ${arapey.className}`}>
-          Ready to book your appointment? <br className="hidden md:block" />
-          Send me a message on Facebook, and let&apos;s create the perfect look for you!
-        </h2>
+      {/* CTA Section */}
+      <section
+        className="text-black px-6 py-12 sm:py-16 md:py-20"
+        style={{
+          background: 'linear-gradient(90deg, #FFF 0%, #D6EDF0 100%)',
+        }}
+      >
+        <div className="max-w-[1240px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+          <h2
+            className={`text-xl sm:text-[20px] md:text-[26px] text-[#65B1B9] font-semibold ${arapey.className}`}
+          >
+            Ready to book your appointment? <br className="hidden md:block" />
+            Send me a message on Facebook, and let&apos;s create the perfect look for you!
+          </h2>
 
-        {/* Button */}
-        <a
-          href="https://www.facebook.com/jessecamillemua"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-[#6DC0C8] text-white px-8 py-3 text-sm font-medium hover:bg-[#56aab2] hover:scale-104 transition whitespace-nowrap border-2 border-black"
-        >
-          Let&apos;s Talk
-        </a>
-      </div>
-    </section>
+          <a
+            href="https://www.facebook.com/jessecamillemua"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#6DC0C8] text-white px-8 py-3 text-sm font-medium hover:bg-[#56aab2] hover:scale-104 transition whitespace-nowrap border-2 border-black"
+          >
+            Let&apos;s Talk
+          </a>
+        </div>
+      </section>
 
-    <footer className="bg-black text-white pt-20 pb-3 relative">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
-        {/* Logo + About */}
-        <div>
-          <div className={`text-2xl italic font-semibold tracking-[.5px] mb-3 ${arapey.className}`}>
-            <span className="text-white">Makeup by </span>
-            <span className="text-[#6DC0C8]">Jesse</span>
+      {/* Footer */}
+      <footer className="bg-black text-white pt-14 sm:pt-20 pb-4 sm:pb-6 relative">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-y-12 md:gap-10 text-center md:text-left">
+          {/* Logo + About */}
+          <div>
+            <div className={`text-2xl italic font-semibold tracking-[.5px] mb-3 ${arapey.className}`}>
+              <span className="text-white">Makeup by </span>
+              <span className="text-[#6DC0C8]">Jesse</span>
+            </div>
+            <p className="text-[14px] text-[#8C9799] leading-relaxed mb-4 max-w-[340px] mx-auto md:mx-0">
+              Hi, I&apos;m Jesse, a professional makeup artist passionate about
+              enhancing natural beauty and making clients feel confident and radiant.
+            </p>
+            <div className="flex justify-center md:justify-start gap-4 text-[#6DC0C8] text-lg">
+              <a href="https://www.facebook.com/jessecamillemua" target="_blank" rel="noopener noreferrer">
+                <FaFacebookF className="cursor-pointer hover:text-white" />
+              </a>
+              <a
+                href="https://www.instagram.com/jessecamille.mua?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaInstagram className="cursor-pointer hover:text-white" />
+              </a>
+              <a
+                href="https://www.tiktok.com/@jessecamille.mua?is_from_webapp=1&sender_device=pc"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <SiTiktok className="cursor-pointer hover:text-white" />
+              </a>
+            </div>
           </div>
-          <p className="text-[14px] text-[#8C9799] leading-relaxed mb-4 max-w-[340px]">
-            Hi, I&apos;m Jesse, a professional makeup artist passionate about
-            enhancing natural beauty and making clients feel confident and radiant.
-          </p>
-          <div className="flex gap-4 text-[#6DC0C8] text-lg">
-            <a
-              href="https://www.facebook.com/jessecamillemua"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaFacebookF className="cursor-pointer hover:text-white" />
-            </a>
 
-            <a
-              href="https://www.instagram.com/jessecamille.mua?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaInstagram className="cursor-pointer hover:text-white" />
-            </a>
+          {/* Get In Touch */}
+        <div>
+          <h3 className="text-[#6DC0C8] text-sm uppercase tracking-widest mb-3 text-center md:text-left">
+            Get In Touch
+          </h3>
 
-            <a
-              href="https://www.tiktok.com/@jessecamille.mua?is_from_webapp=1&sender_device=pc"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <SiTiktok className="cursor-pointer hover:text-white" />
-            </a>
+          <div className="flex justify-center md:justify-start px-12 sm:px-0">
+            <ul className="text-sm space-y-2 text-white text-left w-full max-w-[320px]">
+              <li className="flex items-center gap-2">
+                <FiPhone className="text-[#6DC0C8]" />
+                0998 531 7912
+              </li>
+              <li className="flex items-center gap-2">
+                <FiMail className="text-[#6DC0C8]" />
+                jessecamillesantos@yahoo.com
+              </li>
+              <li className="flex items-center gap-2">
+                <FiMapPin className="text-[#6DC0C8]" />
+                Roosevelt Avenue, 1105, Quezon City, Philippines
+              </li>
+            </ul>
           </div>
         </div>
 
-        {/* Get In Touch */}
-        <div>
-          <h3 className="text-[#6DC0C8] text-sm uppercase tracking-widest mb-3">Get In Touch</h3>
-          <ul className="text-sm space-y-2 text-white">
-            <li className="flex items-center gap-2">
-              <FiPhone className="text-[#6DC0C8]" />
-              0998 531 7912
-            </li>
-            <li className="flex items-center gap-2">
-              <FiMail className="text-[#6DC0C8]" />
-              jessecamillesantos@yahoo.com
-            </li>
-            <li className="flex items-center gap-2">
-              <FiMapPin className="text-[#6DC0C8]" />
-              Roosevelt Avenue, 1105, Quezon City, Philippines
-            </li>
-          </ul>
+          {/* Our Links */}
+          <div>
+            <h3 className="text-[#6DC0C8] text-sm uppercase tracking-widest mb-3">Our Links</h3>
+
+            {/* Line Animation */}
+            <div className="flex items-center justify-center md:justify-start mb-5" ref={lineRef}>
+              <div className="w-[6px] h-[6px] bg-[#6DC0C8] rounded-full mr-2"></div>
+              <motion.div
+                className="h-[1.5px] bg-[#6DC0C8]"
+                initial={{ width: 0 }}
+                animate={isInView ? { width: '70px' } : { width: 0 }}
+                transition={{ duration: 0.7, ease: 'easeInOut' }}
+              />
+            </div>
+
+            {/* Navigation Links */}
+            <div className="grid grid-cols-2 gap-y-2 gap-x-4 text-sm text-white max-w-[220px] mx-auto md:mx-0">
+              <ul className="space-y-2">
+                <li><a href="#home" className="hover:text-[#6DC0C8] cursor-pointer">Home</a></li>
+                <li><a href="#about" className="hover:text-[#6DC0C8] cursor-pointer">About</a></li>
+                <li><a href="#services" className="hover:text-[#6DC0C8] cursor-pointer">Services</a></li>
+              </ul>
+              <ul className="space-y-2">
+                <li><a href="#pricing" className="hover:text-[#6DC0C8] cursor-pointer">Pricing</a></li>
+                <li><a href="#gallery" className="hover:text-[#6DC0C8] cursor-pointer">Gallery</a></li>
+                <li><a href="#reviews" className="hover:text-[#6DC0C8] cursor-pointer">Reviews</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
 
-        {/* Our Links */}
-        <div>
-          <h3 className="text-[#6DC0C8] text-sm uppercase tracking-widest mb-3">Our Links</h3>
-
-        {/* Animated Line with Circle */}
-        <div className="flex items-center mb-5" ref={lineRef}>
-          <div className="w-[6px] h-[6px] bg-[#6DC0C8] rounded-full mr-2"></div>
-          <motion.div
-            className="h-[1.5px] bg-[#6DC0C8]"
-            initial={{ width: 0 }}
-            animate={isInView ? { width: '70px' } : { width: 0 }}
-            transition={{ duration: 0.7, ease: 'easeInOut' }}
-          />
+        {/* Bottom Bar */}
+        <div className="text-center mt-10 text-xs text-gray-400 border-t border-[#071B1D] pt-4 flex items-center justify-center h-16 px-4">
+          {year && (
+            <span>
+              © {year} Makeup by Jesse. All rights reserved. Website developed by D3M Unit.
+            </span>
+          )}
         </div>
-
-        {/* Two-column grid, tightly packed */}
-        <div className="grid grid-cols-2 gap-y-2 gap-x-2 text-sm text-white max-w-[220px]">
-        <ul className="space-y-2">
-          <li>
-            <a href="#home" className="hover:text-[#6DC0C8] cursor-pointer">Home</a>
-          </li>
-          <li>
-            <a href="#about" className="hover:text-[#6DC0C8] cursor-pointer">About</a>
-          </li>
-          <li>
-            <a href="#services" className="hover:text-[#6DC0C8] cursor-pointer">Services</a>
-          </li>
-        </ul>
-
-        <ul className="space-y-2">
-          <li>
-            <a href="#pricing" className="hover:text-[#6DC0C8] cursor-pointer">Pricing</a>
-          </li>
-          <li>
-            <a href="#gallery" className="hover:text-[#6DC0C8] cursor-pointer">Gallery</a>
-          </li>
-          <li>
-            <a href="#reviews" className="hover:text-[#6DC0C8] cursor-pointer">Reviews</a>
-          </li>
-        </ul>
-        </div>
-      </div>
-      </div>
-    
-      {/* Bottom */}
-      <div className="text-center mt-10 text-xs text-gray-400 border-t border-[#071B1D] pt-4 flex items-center justify-center h-16">
-      {year && (
-        <span>© {year} Makeup by Jesse. All rights reserved. Website developed by D3M Unit.</span>
-      )}
-      </div>
-    </footer>
+      </footer>
     </>
   );
 }

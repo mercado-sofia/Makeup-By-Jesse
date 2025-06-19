@@ -23,8 +23,7 @@ export default function GallerySection() {
   return (
     <section
       id="gallery"
-      className="scroll-mt-14 bg-white py-20"
-      style={{ paddingTop: '100px', paddingBottom: '150px' }}
+      className="scroll-mt-14 bg-white pt-20 sm:pt-26 md:pt-[100px] pb-12 sm:pb-20 md:pb-[150px]"
     >
       <div className="mx-auto px-6 text-left" style={{ maxWidth: '1070px' }}>
         <p className={`text-[#6DC0C8] uppercase tracking-widest text-[15px] mb-1 ${oswald.className}`}>Gallery</p>
