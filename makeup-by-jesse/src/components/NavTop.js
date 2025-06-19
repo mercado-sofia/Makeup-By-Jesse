@@ -93,7 +93,7 @@ export default function NavTop() {
       <div
         className={`md:hidden overflow-hidden transition-all duration-500 ${
           menuOpen ? 'max-h-[500px] opacity-100 pt-4 pb-6 px-6' : 'max-h-0 opacity-0 px-6'
-        } ${activeSection === 'home' ? 'bg-black/45' : 'bg-black'}`}
+        } ${activeSection === 'home' ? 'bg-black/60' : 'bg-black'}`}
       >
         <div className="space-y-4 text-center uppercase text-sm tracking-wider font-medium">
           {sectionIds.map((id) => (
