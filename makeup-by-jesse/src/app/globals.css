@@ -42,3 +42,14 @@ html {
   transform: scale(1.2);
 }
 
+@media (max-height: 740px) {
+  .pt-lowheight {
+    padding-top: 8.5rem;
+  }
+}
+
+@media (min-height: 1024px) {
+  .pt-highheight {
+    padding-top: 14rem;
+  }
+}
