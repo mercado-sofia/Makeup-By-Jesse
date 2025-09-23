@@ -12,7 +12,7 @@ export default function PricingSection() {
     { src: '/pricing/desktop/3.png', alt: 'Pricing 3' },
     { src: '/pricing/desktop/4.png', alt: 'Pricing 4' },
     { src: '/pricing/desktop/5.png', alt: 'Pricing 5' },
-    { src: '/pricing/desktop/6.png', alt: 'Pricing 6' },
+
   ];
 
   const mobileSlides = [
@@ -21,7 +21,7 @@ export default function PricingSection() {
     { src: '/pricing/mobiles/3.png', alt: 'Pricing 3' },
     { src: '/pricing/mobiles/4.png', alt: 'Pricing 4' },
     { src: '/pricing/mobiles/5.png', alt: 'Pricing 5' },
-    { src: '/pricing/mobiles/6.png', alt: 'Pricing 6' },
+
   ];
 
   const [isMobile, setIsMobile] = useState(false);

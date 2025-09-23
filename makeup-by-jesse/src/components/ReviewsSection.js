@@ -9,10 +9,10 @@ import 'swiper/css/pagination';
 
 const reviews = [
   {
-    name: 'Ninya',
+    name: 'Garie',
     quote:
-      'Can’t get over how good my makeup turned out, huge thanks to this talented MUA! She really did her magic on my face and made me feel so pretty. Plus, she took a photo of the final look, which I enjoyed because I get to upload my solo looks. If you’ve got an event or just want to feel glam, definitely book her for your next glow-up!',
-    link: 'https://www.facebook.com/share/p/16N273BStz/',
+      'A massive THANK YOU to our unbelievably talented makeup artists from Makeup by Jesse for turning my bride into an actual goddess on our wedding day!  SOAFER LATINASI BRIIIDE!! Your work was nothing short of magical — every detail was perfect. From your calm, positive energy to your next-level artistry, you brought out a glow that left everyone speechless (including me 😍). The way you blended, highlighted, and enhanced her natural beauty? Pure genius. You didn’t just do makeup — you created a masterpiece. We’re beyond grateful. You truly made our day unforgettable. 🫶 HIGHLY RECOMMENDED!',
+    link: 'https://www.facebook.com/share/p/1KA641uiZW/',
   },
   {
     name: 'Kirsten',
