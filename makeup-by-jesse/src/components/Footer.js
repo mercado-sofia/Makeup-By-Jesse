@@ -126,7 +126,7 @@ export default function Footer() {
                 <li><a href="#services" className="hover:text-[#6DC0C8] cursor-pointer">Services</a></li>
               </ul>
               <ul className="space-y-2">
-                <li><a href="#pricing" className="hover:text-[#6DC0C8] cursor-pointer">Pricing</a></li>
+                <li><a href="#packages" className="hover:text-[#6DC0C8] cursor-pointer">Packages</a></li>
                 <li><a href="#gallery" className="hover:text-[#6DC0C8] cursor-pointer">Gallery</a></li>
                 <li><a href="#reviews" className="hover:text-[#6DC0C8] cursor-pointer">Reviews</a></li>
               </ul>

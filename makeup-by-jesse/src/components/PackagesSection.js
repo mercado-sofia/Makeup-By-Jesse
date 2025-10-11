@@ -5,22 +5,22 @@ import { useState, useEffect } from 'react';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 import { oswald, arapey } from '../fonts';
 
-export default function PricingSection() {
+export default function PackagesSection() {
   const desktopSlides = [
-    { src: '/pricing/desktop/1.png', alt: 'Pricing 1' },
-    { src: '/pricing/desktop/2.png', alt: 'Pricing 2' },
-    { src: '/pricing/desktop/3.png', alt: 'Pricing 3' },
-    { src: '/pricing/desktop/4.png', alt: 'Pricing 4' },
-    { src: '/pricing/desktop/5.png', alt: 'Pricing 5' },
+    { src: '/packaging/desktop/1.png', alt: 'Package 1' },
+    { src: '/packaging/desktop/2.png', alt: 'Package 2' },
+    { src: '/packaging/desktop/3.png', alt: 'Package 3' },
+    { src: '/packaging/desktop/4.png', alt: 'Package 4' },
+    { src: '/packaging/desktop/5.png', alt: 'Package 5' },
 
   ];
 
   const mobileSlides = [
-    { src: '/pricing/mobiles/1.png', alt: 'Pricing 1' },
-    { src: '/pricing/mobiles/2.png', alt: 'Pricing 2' },
-    { src: '/pricing/mobiles/3.png', alt: 'Pricing 3' },
-    { src: '/pricing/mobiles/4.png', alt: 'Pricing 4' },
-    { src: '/pricing/mobiles/5.png', alt: 'Pricing 5' },
+    { src: '/packaging/mobiles/1.png', alt: 'Package 1' },
+    { src: '/packaging/mobiles/2.png', alt: 'Package 2' },
+    { src: '/packaging/mobiles/3.png', alt: 'Package 3' },
+    { src: '/packaging/mobiles/4.png', alt: 'Package 4' },
+    { src: '/packaging/mobiles/5.png', alt: 'Package 5' },
 
   ];
 
@@ -44,15 +44,15 @@ export default function PricingSection() {
 
   return (
     <section
-      id="pricing"
+      id="packages"
       className="scroll-mt-20 relative bg-gray-50 pt-16 sm:pt-14 md:pt-20 pb-20 sm:pb-40 md:pb-[150px]"
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-8 text-center">
         <p className={`text-[#6DC0C8] uppercase tracking-widest text-sm mb-1 ${oswald.className}`}>
-          Prices
+          Packages
         </p>
         <h2 className={`text-5xl font-medium text-gray-900 mb-10 ${arapey.className}`}>
-          Pricing Plan
+          Package Plans
         </h2>
 
           {isMobile ? (

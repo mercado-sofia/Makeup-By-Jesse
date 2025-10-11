@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { CgMenuRightAlt } from 'react-icons/cg';
 import { oswald, arapey } from '../fonts';
 
-const sectionIds = ['home', 'about', 'services', 'pricing', 'gallery', 'reviews'];
+const sectionIds = ['home', 'about', 'services', 'packages', 'gallery', 'reviews'];
 
 export default function NavTop() {
   const [scrolled, setScrolled] = useState(false);
