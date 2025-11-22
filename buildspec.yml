@@ -5,12 +5,10 @@ phases:
     runtime-versions:
       nodejs: 20
     commands:
-      - cd makeup-by-jesse
-      - npm install
+      - cd makeup-by-jesse && npm install
   build:
     commands:
-      - cd makeup-by-jesse
-      - npm run build
+      - cd makeup-by-jesse && npm run build
 artifacts:
   files:
     - '**/*'
