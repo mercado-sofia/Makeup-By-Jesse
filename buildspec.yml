@@ -14,9 +14,9 @@ phases:
     runtime-versions:
       nodejs: 20
     commands:
-      - echo "Installing dependencies in makeup-by-jesse directory"
-      - echo "CODEBUILD_SRC_DIR: $CODEBUILD_SRC_DIR"
       - |
+        echo "Installing dependencies in makeup-by-jesse directory"
+        echo "CODEBUILD_SRC_DIR: $CODEBUILD_SRC_DIR"
         if [ -d "$CODEBUILD_SRC_DIR/makeup-by-jesse" ]; then
           cd $CODEBUILD_SRC_DIR/makeup-by-jesse && npm install
         elif [ -d "makeup-by-jesse" ]; then
@@ -29,15 +29,15 @@ phases:
         fi
   build:
     commands:
-      - echo "Building Next.js application"
-      - echo "Current directory in BUILD phase:"
-      - pwd
-      - echo "CODEBUILD_SRC_DIR: $CODEBUILD_SRC_DIR"
-      - echo "Listing contents:"
-      - ls -la
-      - echo "Checking if makeup-by-jesse exists:"
-      - test -d "makeup-by-jesse" && echo "makeup-by-jesse directory exists" || echo "makeup-by-jesse directory NOT found"
       - |
+        echo "Building Next.js application"
+        echo "Current directory in BUILD phase:"
+        pwd
+        echo "CODEBUILD_SRC_DIR: $CODEBUILD_SRC_DIR"
+        echo "Listing contents:"
+        ls -la
+        echo "Checking if makeup-by-jesse exists:"
+        test -d "makeup-by-jesse" && echo "makeup-by-jesse directory exists" || echo "makeup-by-jesse directory NOT found"
         if [ -d "$CODEBUILD_SRC_DIR/makeup-by-jesse" ]; then
           cd $CODEBUILD_SRC_DIR/makeup-by-jesse && npm run build
         elif [ -d "makeup-by-jesse" ]; then
