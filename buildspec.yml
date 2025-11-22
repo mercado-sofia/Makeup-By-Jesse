@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 20
+    commands:
+      - cd makeup-by-jesse
+      - npm install
+  build:
+    commands:
+      - cd makeup-by-jesse
+      - npm run build
+artifacts:
+  files:
+    - '**/*'
+  base-directory: makeup-by-jesse/out
+  name: build-artifacts
+
