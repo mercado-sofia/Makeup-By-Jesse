@@ -1,14 +1,39 @@
 version: 0.2
 
 phases:
-  install:
+  pre_build:
     runtime-versions:
       nodejs: 20
     commands:
-      - cd makeup-by-jesse && npm install
+      - echo "Current directory: $(pwd)"
+      - echo "Listing directory contents:"
+      - ls -la
+      - echo "Checking for makeup-by-jesse directory:"
+      - ls -la makeup-by-jesse/ || echo "makeup-by-jesse directory not found"
+      - echo "Checking for package.json:"
+      - test -f makeup-by-jesse/package.json && echo "package.json found" || echo "package.json NOT found"
+  install:
+    commands:
+      - echo "Installing dependencies in makeup-by-jesse directory"
+      - |
+        if [ -d "makeup-by-jesse" ]; then
+          cd makeup-by-jesse
+          npm install
+        else
+          echo "ERROR: makeup-by-jesse directory not found!"
+          exit 1
+        fi
   build:
     commands:
-      - cd makeup-by-jesse && npm run build
+      - echo "Building Next.js application"
+      - |
+        if [ -d "makeup-by-jesse" ]; then
+          cd makeup-by-jesse
+          npm run build
+        else
+          echo "ERROR: makeup-by-jesse directory not found!"
+          exit 1
+        fi
 artifacts:
   files:
     - '**/*'
