@@ -79,6 +79,27 @@ phases:
           find . -maxdepth 2 -type d -name "*makeup*" || echo "No makeup directories found"
           exit 1
         fi
+  post_build:
+    commands:
+      - |
+        echo "=== POST_BUILD Phase ==="
+        echo "Verifying build artifacts exist..."
+        OUT_DIR=""
+        if [ -d "$CODEBUILD_SRC_DIR/makeup-by-jesse/out" ]; then
+          OUT_DIR="$CODEBUILD_SRC_DIR/makeup-by-jesse/out"
+          echo "Artifacts found at: $OUT_DIR"
+        elif [ -d "makeup-by-jesse/out" ]; then
+          OUT_DIR="makeup-by-jesse/out"
+          echo "Artifacts found at: $OUT_DIR"
+        else
+          echo "ERROR: Build artifacts not found!"
+          find . -name "out" -type d || echo "No 'out' directory found"
+          exit 1
+        fi
+        echo "Uploading files to S3..."
+        cd $OUT_DIR
+        aws s3 sync . s3://makeup-by-jesse-app/ --delete --region ap-northeast-1
+        echo "Upload complete!"
 artifacts:
   files:
     - '**/*'
