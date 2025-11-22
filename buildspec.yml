@@ -3,7 +3,12 @@ version: 0.2
 phases:
   pre_build:
     commands:
+      - echo "=== PRE_BUILD Phase ==="
+      - echo "Current directory:"
       - pwd
+      - echo "CODEBUILD_SRC_DIR: $CODEBUILD_SRC_DIR"
+      - echo "All CODEBUILD_SRC_DIR variables:"
+      - env | grep CODEBUILD_SRC_DIR || echo "No CODEBUILD_SRC_DIR variables found"
       - echo "Listing directory contents:"
       - ls -la
       - echo "Checking for makeup-by-jesse directory:"
@@ -15,21 +20,36 @@ phases:
       nodejs: 20
     commands:
       - |
+        echo "=== INSTALL Phase ==="
         echo "Installing dependencies in makeup-by-jesse directory"
         echo "CODEBUILD_SRC_DIR: $CODEBUILD_SRC_DIR"
+        echo "Current directory:"
+        pwd
+        echo "Searching for makeup-by-jesse directory..."
+        # Try multiple possible locations
         if [ -d "$CODEBUILD_SRC_DIR/makeup-by-jesse" ]; then
+          echo "Found at: $CODEBUILD_SRC_DIR/makeup-by-jesse"
           cd $CODEBUILD_SRC_DIR/makeup-by-jesse && npm install
         elif [ -d "makeup-by-jesse" ]; then
+          echo "Found at: ./makeup-by-jesse"
           cd makeup-by-jesse && npm install
+        elif [ -f "package.json" ]; then
+          echo "Found package.json in current directory, installing here"
+          npm install
         else
-          echo "ERROR: Cannot find makeup-by-jesse directory!"
+          echo "ERROR: Cannot find makeup-by-jesse directory or package.json!"
+          echo "Current directory:"
           pwd
+          echo "Directory contents:"
           ls -la
+          echo "All subdirectories:"
+          find . -maxdepth 2 -type d -name "*makeup*" || echo "No makeup directories found"
           exit 1
         fi
   build:
     commands:
       - |
+        echo "=== BUILD Phase ==="
         echo "Building Next.js application"
         echo "Current directory in BUILD phase:"
         pwd
@@ -38,14 +58,24 @@ phases:
         ls -la
         echo "Checking if makeup-by-jesse exists:"
         test -d "makeup-by-jesse" && echo "makeup-by-jesse directory exists" || echo "makeup-by-jesse directory NOT found"
+        # Try multiple possible locations
         if [ -d "$CODEBUILD_SRC_DIR/makeup-by-jesse" ]; then
+          echo "Found at: $CODEBUILD_SRC_DIR/makeup-by-jesse"
           cd $CODEBUILD_SRC_DIR/makeup-by-jesse && npm run build
         elif [ -d "makeup-by-jesse" ]; then
+          echo "Found at: ./makeup-by-jesse"
           cd makeup-by-jesse && npm run build
+        elif [ -f "package.json" ]; then
+          echo "Found package.json in current directory, building here"
+          npm run build
         else
-          echo "ERROR: Cannot find makeup-by-jesse directory!"
+          echo "ERROR: Cannot find makeup-by-jesse directory or package.json!"
+          echo "Current directory:"
           pwd
+          echo "Directory contents:"
           ls -la
+          echo "All subdirectories:"
+          find . -maxdepth 2 -type d -name "*makeup*" || echo "No makeup directories found"
           exit 1
         fi
 artifacts:
