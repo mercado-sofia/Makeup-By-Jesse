@@ -3,18 +3,19 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - echo "=== PRE_BUILD Phase ==="
-      - echo "Current directory:"
-      - pwd
-      - echo "CODEBUILD_SRC_DIR: $CODEBUILD_SRC_DIR"
-      - echo "All CODEBUILD_SRC_DIR variables:"
-      - env | grep CODEBUILD_SRC_DIR || echo "No CODEBUILD_SRC_DIR variables found"
-      - echo "Listing directory contents:"
-      - ls -la
-      - echo "Checking for makeup-by-jesse directory:"
-      - ls -la makeup-by-jesse/ || echo "makeup-by-jesse directory not found"
-      - echo "Checking for package.json:"
-      - test -f makeup-by-jesse/package.json && echo "package.json found" || echo "package.json NOT found"
+      - |
+        echo "=== PRE_BUILD Phase ==="
+        echo "Current directory:"
+        pwd
+        echo "CODEBUILD_SRC_DIR: $CODEBUILD_SRC_DIR"
+        echo "All CODEBUILD_SRC_DIR variables:"
+        env | grep CODEBUILD_SRC_DIR || echo "No CODEBUILD_SRC_DIR variables found"
+        echo "Listing directory contents:"
+        ls -la
+        echo "Checking for makeup-by-jesse directory:"
+        ls -la makeup-by-jesse/ || echo "makeup-by-jesse directory not found"
+        echo "Checking for package.json:"
+        test -f makeup-by-jesse/package.json && echo "package.json found" || echo "package.json NOT found"
   install:
     runtime-versions:
       nodejs: 20
